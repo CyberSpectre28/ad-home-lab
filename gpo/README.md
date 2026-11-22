@@ -10,8 +10,10 @@ GPOs configured in the lab, what each setting does, and why a hospital would use
 | Workstation Security Baseline | Workstations OU | Logon banner | "Authorized Use Only" + PHI notice | Legal notice; supports HIPAA access policies |
 | Workstation Security Baseline | Workstations OU | Machine inactivity limit | 600 seconds | Locks unattended screens showing patient data |
 | Workstation Security Baseline | Workstations OU | Removable storage | Deny all | Prevents patient data leaving on USB drives |
+| Department Drive Maps | Staff OU | Mapped drive N: → \\DC01\Nursing (targeted to GG_Nursing) | Create, reconnect | Nurses get their department share automatically; other departments don't |
 
 ## Notes
 - Domain-wide password and lockout rules only take effect from a GPO linked at the domain level, which is why they are set in the Default Domain Policy.
-- Verified on CLIENT01 with `gpresult /r /scope computer` (see screenshot 23).
+- Computer settings verified on CLIENT01 with `gpresult /r /scope computer` (screenshot 23) and the logon banner (screenshot 24).
+| Department Drive Maps | Staff OU | Mapped drive N: → `\\DC01\Nursing` (targeted to GG_Nursing) | Create, reconnect | Nurses get their department share automatically; other departments don't |
 - Full HTML reports: `Workstation-Security-Baseline.html`, `Default-Domain-Policy.html` (exported with `Get-GPOReport`).
