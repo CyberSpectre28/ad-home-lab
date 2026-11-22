@@ -20,3 +20,7 @@
 - Did: set domain password policy (12 chars) and lockout (5 attempts / 15 min); created Workstation Security Baseline GPO (logon banner, 10-min screen lock, USB storage blocked) linked to Workstations OU; verified on CLIENT01 with gpresult and the logon banner
 - Learned: domain password rules only work from a domain-linked GPO; "Allow Administrator account lockout" is now on by default
 - Fix: removed a stray nano .save file from the repo and added .gitignore
+## 2026-11-22 – Part 7: File shares
+- Did: created Nursing, IT and Public shares with share + NTFS permissions (inheritance removed, groups get Modify); mapped N: for GG_Nursing via Group Policy Preferences with item-level targeting
+- Tested: Maria sees shares, is denied IT, can write to Nursing, gets N:; Alex (IT) gets no N:
+- Learned: access-based enumeration hides folders inside a share, not the shares themselves; share and NTFS permissions both apply, and the stricter wins
