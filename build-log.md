@@ -14,3 +14,9 @@
 - Problem: host restarted unexpectedly with VMs running
 - Fix: verified DC health (services, SYSVOL/NETLOGON, DFSR, dcdiag) – all passed
 - Note: nslookup "Server: UnKnown" is a missing reverse lookup zone, not an error
+
+
+## 2026-11-22 – Part 6: Group Policy
+- Did: set domain password policy (12 chars) and lockout (5 attempts / 15 min); created Workstation Security Baseline GPO (logon banner, 10-min screen lock, USB storage blocked) linked to Workstations OU; verified on CLIENT01 with gpresult and the logon banner
+- Learned: domain password rules only work from a domain-linked GPO; "Allow Administrator account lockout" is now on by default
+- Fix: removed a stray nano .save file from the repo and added .gitignore
