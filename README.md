@@ -91,6 +91,7 @@ Each ticket was reproduced, diagnosed, fixed and verified, then written up with 
 ad-home-lab/
 ├── README.md
 ├── build-log.md          # step-by-step build notes
+|-- commands.md           # Every command used groupded by machines 
 ├── gpo/                  # GPO summary and full HTML reports
 ├── scripts/              # onboarding, repair and offboarding scripts + user CSV
 ├── tickets/              # help desk ticket write-ups (001–005)
@@ -102,6 +103,7 @@ ad-home-lab/
 - Lab passwords are intentionally simple and are not stored in this repository. In production I'd use unique passphrases managed by a password manager, plus a banned-password list.
 - Windows Server and Windows 11 run on Microsoft's free evaluation licenses.
 - CLIENT01's internet adapter is normally disconnected to keep the lab isolated.
+- Built with step-by-step guidance from an AI assistant (Claude). All configuration, testing, troubleshooting and documentation were done hands-on.
 
 ## What I'd add next
 

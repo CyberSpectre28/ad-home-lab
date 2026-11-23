@@ -24,3 +24,12 @@
 - Did: created Nursing, IT and Public shares with share + NTFS permissions (inheritance removed, groups get Modify); mapped N: for GG_Nursing via Group Policy Preferences with item-level targeting
 - Tested: Maria sees shares, is denied IT, can write to Nursing, gets N:; Alex (IT) gets no N:
 - Learned: access-based enumeration hides folders inside a share, not the shares themselves; share and NTFS permissions both apply, and the stricter wins
+## Part 8: Help desk tickets
+- Worked 5 tickets end to end: account lockout, password reset, group access, DNS misconfiguration, offboarding.
+- Write-ups in `tickets/`, offboarding script in `scripts/Disable-LabUser.ps1`.
+- Snapshots: `part8-done` on DC01 and CLIENT01.
+
+## Part 9: Documentation
+- Exported GPO reports to `gpo/` (converted from UTF-16 to UTF-8 for GitHub).
+- Copied the final scripts and user CSV from DC01.
+- Wrote the README and the command reference.
